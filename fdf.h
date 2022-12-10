@@ -1,21 +1,25 @@
 #ifndef FDF_H
 #define FDF_H
 
+#include "mlx/mlx.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <fcntl.h>
 
-typedef struct vars
+typedef struct s_data
 {
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}	t_data;
 
-}  t_vars;
-
-
-typedef struct data
+typedef struct s_vars
 {
-
-} t_data;
-
+	void	*mlx;
+	void	*win;
+}	t_vars;
 
 typedef struct mlx_struct
 {
